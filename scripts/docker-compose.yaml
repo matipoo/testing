@@ -8,8 +8,6 @@ services:
       - 2154:2154
     volumes:
       - /opt/validators/${NAME_VAR1}/validator_data,target=/var/data
-    environment: 
-      - 
     restart: always
     networks:
       lan:
@@ -22,8 +20,6 @@ services:
       - 2154:2154
     volumes:
       - /opt/validators/${NAME_VAR2}/validator_data,target=/var/data
-    environment: 
-      - 
     restart: always
     networks:
       lan:
@@ -36,8 +32,6 @@ services:
       - 2154:2154
     volumes:
       - /opt/validators/${NAME_VAR3}/validator_data,target=/var/data
-    environment: 
-      - 
     restart: always
     networks:
       lan:
