@@ -2,45 +2,56 @@ n: "2"
 
 services:
 
-  nombreraro:
-    image: dperson/samba:rpi
-    restart: always
-    command: '-u "pi;password" -s "media;/media;yes;no" -s "downloads;/downloads;yes;no"'
-    stdin_open: true
-    tty: true
+  ${NAME_VAR1}:
+    image: quay.io/team-helium/validator:latest-val-amd64
     ports:
-      - 139:130
-      - 445:445
+      - 2154:2154
     volumes:
-      - /usr/share/zoneinfo/America/Argentina/Mendoza:/etc/localtime
-      - /home/pi/media:/media
-      - /home/pi/downloads:/downloads
-
-    networks:
-      lan:
-        ipv4_address: 192.168.0.6
-
-
-  rtorrent:
-    image: pablokbs/rutorrent-armhf
-    ports:
-      - 80:80
-      - 51413:51413
-      - 6881:6881/udp
-    volumes:
-      - /home/pi/torrents-config/rtorrent:/config/rtorrent
-      - /home/pi/downloads:/downloads
+      - /opt/validators/${NAME_VAR1}/validator_data,target=/var/data
+    environment: 
+      - 
     restart: always
     networks:
       lan:
-        ipv4_address: 192.168.0.5
+        ipv4_address: ${IPPUBLICA1} #IPPUBLICA
+
+
+  ${NAME_VAR2}:
+    image: quay.io/team-helium/validator:latest-val-amd64
+    ports:
+      - 2154:2154
+    volumes:
+      - /opt/validators/${NAME_VAR2}/validator_data,target=/var/data
+    environment: 
+      - 
+    restart: always
+    networks:
+      lan:
+        ipv4_address: ${IPPUBLICA2} #IPPUBLICA
+
+
+  ${NAME_VAR3}:
+    image: quay.io/team-helium/validator:latest-val-amd64
+    ports:
+      - 2154:2154
+    volumes:
+      - /opt/validators/${NAME_VAR3}/validator_data,target=/var/data
+    environment: 
+      - 
+    restart: always
+    networks:
+      lan:
+        ipv4_address: ${IPPUBLICA3} #IPPUBLICA
+
+    
+
 
 networks:
   lan:
-    driver: macvlan
+    driver: macvlan #revisar
     driver_opts:
-      parent: eth0
+      parent: ens3f0
     ipam:
       config:
-        - subnet: "192.168.0.0/24"
-          gateway: "192.168.0.1"
+        - subnet: "192.168.0.0/24" #revisar
+          gateway: "192.168.0.1" #revisar
