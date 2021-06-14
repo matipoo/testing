@@ -117,7 +117,6 @@
         },
         "timeTextColor": "#d8d9da",
         "title": "In Consensus Group",
-        "type": "skinny-graphite-hedgehog",
         "units": "short",
         "useTimePrecision": false,
         "valueMaps": [
