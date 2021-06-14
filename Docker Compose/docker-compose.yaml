@@ -2,7 +2,7 @@ n: "2"
 
 services:
 
-  samba:
+  nombreraro:
     image: dperson/samba:rpi
     restart: always
     command: '-u "pi;password" -s "media;/media;yes;no" -s "downloads;/downloads;yes;no"'
