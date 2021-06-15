@@ -6,11 +6,11 @@ sudo docker run \
     --restart always \
     --network valbridge \
     --ip  172.28.5.3\
-    -e "NAT_INTERNAL_IP=172.28.5.3" \
-    -e "NAT_EXTERNAL_IP=51.81.113.208" \
-    --publish 51.81.113.208:9825:9825/tcp \
+    -e "NAT_INTERNAL_IP=172.28.5.9" \
+    -e "NAT_EXTERNAL_IP=51.81.113.223" \
+    --publish 51.81.113.223:9825:9825/tcp \
     --name miner_exporter \
-    -v /var/run/docker.sock:/var/run/docker.sock
+    -v /var/run/docker.sock:/var/run/docker.sock \
      ghcr.io/tedder/miner_exporter:latest
 
 
@@ -57,11 +57,11 @@ sudo docker run \
     --init \
     --restart always \
     --network valbridge \
-    --ip  172.28.5.6\
-    -e "NAT_INTERNAL_IP=172.28.5.6" \
-    -e "NAT_EXTERNAL_IP=51.81.113.208" \
-    --publish 51.81.113.208:9100:9100/tcp \
-    --name node \
+    --ip  172.28.5.11\
+    -e "NAT_INTERNAL_IP=172.28.5.11" \
+    -e "NAT_EXTERNAL_IP=51.81.113.223" \
+    --publish 51.81.123.208:9100:9100/tcp \
+    --name node2 \
     prom/node-exporter
 
 ### Testeando el docker de miner
