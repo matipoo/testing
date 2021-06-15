@@ -60,7 +60,7 @@ sudo docker run \
     --ip  172.28.5.11\
     -e "NAT_INTERNAL_IP=172.28.5.11" \
     -e "NAT_EXTERNAL_IP=51.81.113.223" \
-    --publish 51.81.123.208:9100:9100/tcp \
+    --publish 51.81.113.223:9100:9100/tcp \
     --name node2 \
     prom/node-exporter
 
