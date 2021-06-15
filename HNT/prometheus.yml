@@ -36,6 +36,6 @@ scrape_configs:
     scrape_interval: 5m
     scrape_timeout: 1m
     static_configs:
-    - targets: ['51.81.113.223:8080']
+    - targets: ['51.81.113.208:8081']
     tls_config:
       insecure_skip_verify: true

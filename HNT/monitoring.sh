@@ -69,12 +69,12 @@ watch -n60 'echo -n "miner addr:   "; docker exec validator miner peer addr | cu
 
 ### cadvisor ###
 
-docker run \
+sudo docker run \
   --volume=/:/rootfs:ro \
   --volume=/var/run:/var/run:rw \
   --volume=/sys:/sys:ro \
   --volume=/var/lib/docker/:/var/lib/docker:ro \
-  --publish 51.81.113.223:8080:8080/tcp \
+  --publish 51.81.113.208:8081:8080/tcp \
   --detach=true \
   --name=cadvisor \
   google/cadvisor:latest
