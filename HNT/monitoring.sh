@@ -67,6 +67,25 @@ sudo docker run \
 ### Testeando el docker de miner
 watch -n60 'echo -n "miner addr:   "; docker exec validator miner peer addr | cut -d/ -f 3; echo -n "in consensus? "; docker exec validator miner info in_consensus; docker exec validator miner info p2p_status; docker exec validator miner ledger validators -v | egrep -i "ripe-shadow-sardine|owner_address"; docker exec validator miner peer book -s'
 
+### cadvisor ###
+
+docker run \
+  --volume=/:/rootfs:ro \
+  --volume=/var/run:/var/run:rw \
+  --volume=/sys:/sys:ro \
+  --volume=/var/lib/docker/:/var/lib/docker:ro \
+  --publish 51.81.113.223:8080:8080/tcp \
+  --detach=true \
+  --name=cadvisor \
+  google/cadvisor:latest
+
+
+
+
+
+
+
+
 ### Influx DB?
 
 sudo docker run -p 8086:8086 \
