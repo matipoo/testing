@@ -69,7 +69,7 @@ watch -n60 'echo -n "miner addr:   "; docker exec validator miner peer addr | cu
 
 ### Influx DB?
 
-$ docker run -p 8086:8086 \
+sudo docker run -p 8086:8086 \
       -v influxdb:/var/lib/influxdb \
       -v influxdb2:/var/lib/influxdb2 \
       -v influxdb2-config:/etc/influxdb2 \
