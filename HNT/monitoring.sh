@@ -67,5 +67,17 @@ sudo docker run \
 ### Testeando el docker de miner
 watch -n60 'echo -n "miner addr:   "; docker exec validator miner peer addr | cut -d/ -f 3; echo -n "in consensus? "; docker exec validator miner info in_consensus; docker exec validator miner info p2p_status; docker exec validator miner ledger validators -v | egrep -i "ripe-shadow-sardine|owner_address"; docker exec validator miner peer book -s'
 
+### Influx DB?
 
+$ docker run -p 8086:8086 \
+      -v influxdb:/var/lib/influxdb \
+      -v influxdb2:/var/lib/influxdb2 \
+      -v influxdb2-config:/etc/influxdb2 \
+      -v $PWD/influxdb.conf:/etc/influxdb/influxdb.conf \
+      -e DOCKER_INFLUXDB_INIT_MODE=upgrade \
+      -e DOCKER_INFLUXDB_INIT_USERNAME=my-user \
+      -e DOCKER_INFLUXDB_INIT_PASSWORD=my-password \
+      -e DOCKER_INFLUXDB_INIT_ORG=my-org \
+      -e DOCKER_INFLUXDB_INIT_BUCKET=my-bucket \
+      influxdb:2.0
 
