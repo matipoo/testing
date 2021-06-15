@@ -1,0 +1,13 @@
+version: "3"
+services:
+  validator:
+    image: quay.io/team-helium/validator:latest-val-amd64
+    container_name: validator
+
+  miner_exporter:
+     image: ghcr.io/tedder/miner_exporter:latest
+     container_name: miner_exporter
+     volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+     ports:
+        - "9825:9825"
