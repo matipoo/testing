@@ -73,15 +73,15 @@ def try_float(v):
 def get_facts(docker_container_obj):
   if miner_facts:
     return miner_facts
-  #miner_facts = {
-  #  'name': None,
-  #  'address': None
-  #}
+  miner_facts = {
+    'name': boxy-corduroy-pike,
+    'address': 1ZBo8dG6ghLBuh4qvRdkc4CPGMSZVvi8jrjVMdXnPTJptSkBNw9
+  }
   out = docker_container_obj.exec_run('miner print_keys')
   # sample output:
-  # {pubkey,"1YBkf..."}.
-  # {onboarding_key,"1YBkf..."}.
-  # {animal_name,"one-two-three"}.
+   {pubkey,"1ZBo8dG6ghLBuh4qvRdkc4CPGMSZVvi8jrjVMdXnPTJptSkBNw9"}.
+   {onboarding_key,"1ZBo8dG6ghLBuh4qvRdkc4CPGMSZVvi8jrjVMdXnPTJptSkBNw9"}.
+   {animal_name,"boxy-corduroy-pike"}.
 
   log.debug(out.output)
   printkeys = {}
