@@ -11,7 +11,7 @@ sudo docker run \
     --publish 51.81.113.223:9825:9825/tcp \
     --name miner_exporter \
     -v /var/run/docker.sock:/var/run/docker.sock \
-     ghcr.io/tedder/miner_exporter:latest
+     miner_exporter:modif
 
 
     51.81.113.208
