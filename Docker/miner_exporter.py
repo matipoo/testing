@@ -23,7 +23,7 @@ log.setLevel(logging.INFO)
 
 # time to sleep between scrapes
 UPDATE_PERIOD = int(os.environ.get('UPDATE_PERIOD', 30))
-VALIDATOR_CONTAINER_NAME = os.environ.get('boxy-corduroy-pike', 'validator')
+VALIDATOR_CONTAINER_NAME = os.environ.get('VALIDATOR_CONTAINER_NAME','boxy-corduroy-pike')
 
 # prometheus exporter types Gauge,Counter,Summary,Histogram,Info and Enum
 SCRAPE_TIME = prometheus_client.Summary('validator_scrape_time', 'Time spent collecting miner data')
@@ -79,9 +79,9 @@ def get_facts(docker_container_obj):
   }
   out = docker_container_obj.exec_run('miner print_keys')
   # sample output:
-   {pubkey,"1ZBo8dG6ghLBuh4qvRdkc4CPGMSZVvi8jrjVMdXnPTJptSkBNw9"}.
-   {onboarding_key,"1ZBo8dG6ghLBuh4qvRdkc4CPGMSZVvi8jrjVMdXnPTJptSkBNw9"}.
-   {animal_name,"boxy-corduroy-pike"}.
+   #{pubkey,"1ZBo8dG6ghLBuh4qvRdkc4CPGMSZVvi8jrjVMdXnPTJptSkBNw9"}.
+   #{onboarding_key,"1ZBo8dG6ghLBuh4qvRdkc4CPGMSZVvi8jrjVMdXnPTJptSkBNw9"}.
+   #{animal_name,"boxy-corduroy-pike"}.
 
   log.debug(out.output)
   printkeys = {}
