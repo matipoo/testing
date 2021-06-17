@@ -11,7 +11,7 @@ sudo docker run \
     --publish 51.81.113.220:9825:9825/tcp \
     --name miner_exporter \
     -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter:modif
+     miner_modif:modif
 
 
     51.81.113.208
