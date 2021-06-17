@@ -26,7 +26,7 @@ scrape_configs:
 
   - job_name: 'miner_exporter'
     static_configs:
-    - targets: ['51.81.113.208:9825']
+    - targets: ['51.81.113.223:9825','51.81.113.220:9825']
 
   - job_name: 'node'
     static_configs:

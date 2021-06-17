@@ -9,7 +9,7 @@ sudo docker run \
     -e "NAT_INTERNAL_IP=172.28.5.12" \
     -e "NAT_EXTERNAL_IP=51.81.113.220" \
     --publish 51.81.113.220:9825:9825/tcp \
-    --name miner_exporter \
+    --name miner_exporter_macho \
     -v /var/run/docker.sock:/var/run/docker.sock \
      miner_modif:modif
 
