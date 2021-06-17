@@ -5,13 +5,13 @@ sudo docker run \
     --init \
     --restart always \
     --network valbridge \
-    --ip  172.28.5.12\
-    -e "NAT_INTERNAL_IP=172.28.5.12" \
-    -e "NAT_EXTERNAL_IP=51.81.113.220" \
-    --publish 51.81.113.220:9825:9825/tcp \
+    --ip  172.28.5.16\
+    -e "NAT_INTERNAL_IP=172.28.5.16" \
+    -e "NAT_EXTERNAL_IP=51.81.113.221" \
+    --publish 51.81.113.221:9825:9825/tcp \
     --name miner_exporter_macho \
     -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_modif:modif
+     miner_exporter_multi:modif
 
 
     51.81.113.208
