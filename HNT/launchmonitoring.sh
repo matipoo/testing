@@ -270,3 +270,68 @@ sudo docker run \
     --name miner_exporter_short_menthol \
     -v /var/run/docker.sock:/var/run/docker.sock \
      miner_exporter_short_menthol:modif
+
+sudo docker run \
+    -d \
+    --init \
+    --restart always \
+    --network valbridge \
+    --ip  172.28.5.65\
+    -e "NAT_INTERNAL_IP=172.28.5.65" \
+    -e "NAT_EXTERNAL_IP=135.148.12.211" \
+    --publish 135.148.128.211:9825:9825/tcp \
+    --name miner_exporter_short_obsidian \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+     miner_exporter_short_obsidian:modif
+
+sudo docker run \
+    -d \
+    --init \
+    --restart always \
+    --network valbridge \
+    --ip  172.28.5.66\
+    -e "NAT_INTERNAL_IP=172.28.5.66" \
+    -e "NAT_EXTERNAL_IP=135.148.12.212" \
+    --publish 135.148.128.212:9825:9825/tcp \
+    --name miner_exporter_hot \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+     miner_exporter_hot:modif
+
+sudo docker run \
+    -d \
+    --init \
+    --restart always \
+    --network valbridge \
+    --ip  172.28.5.67\
+    -e "NAT_INTERNAL_IP=172.28.5.67" \
+    -e "NAT_EXTERNAL_IP=135.148.12.213" \
+    --publish 135.148.128.213:9825:9825/tcp \
+    --name miner_exporter_huge \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+     miner_exporter_huge:modif
+
+sudo docker run \
+    -d \
+    --init \
+    --restart always \
+    --network valbridge \
+    --ip  172.28.5.68\
+    -e "NAT_INTERNAL_IP=172.28.5.68" \
+    -e "NAT_EXTERNAL_IP=135.148.12.214" \
+    --publish 135.148.128.214:9825:9825/tcp \
+    --name miner_exporter_skinny \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+     miner_exporter_skinny:modif
+
+sudo docker run \
+    -d \
+    --init \
+    --restart always \
+    --network valbridge \
+    --ip  172.28.5.69\
+    -e "NAT_INTERNAL_IP=172.28.5.69" \
+    -e "NAT_EXTERNAL_IP=135.148.12.215" \
+    --publish 135.148.128.215:9825:9825/tcp \
+    --name miner_exporter_boxy \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+     miner_exporter_boxy:modif
