@@ -22,3 +22,12 @@ sudo docker stop d090b34684c7 && sudo docker rm d090b34684c7
 sudo docker stop 4cc9787c717b && sudo docker rm 4cc9787c717b
 sudo docker stop 8bdbd6921a6f && sudo docker rm 8bdbd6921a6f
 sudo docker stop 0e8cfc1277af && sudo docker rm 0e8cfc1277af
+
+sudo docker stop 
+
+sudo docker stop miner_exporter_boxy && sudo docker rm miner_exporter_boxy
+sudo docker stop miner_exporter_huge && sudo docker rm miner_exporter_huge
+sudo docker stop miner_exporter_hot && sudo docker rm miner_exporter_hot
+sudo docker stop miner_exporter_short_obsidian && sudo docker rm miner_exporter_short_obsidian
+sudo docker stop miner_exporter_short_menthol && sudo docker rm miner_exporter_short_menthol
+sudo docker stop miner_exporter_sharp && sudo docker rm miner_exporter_sharp
