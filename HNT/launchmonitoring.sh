@@ -122,8 +122,8 @@ sudo docker run \
     --network valbridge \
     --ip  172.28.5.54\
     -e "NAT_INTERNAL_IP=172.28.5.54" \
-    -e "NAT_EXTERNAL_IP=51.81.113.215" \
-    --publish 51.81.113.215:9825:9825/tcp \
+    -e "NAT_EXTERNAL_IP=51.81.113.216" \
+    --publish 51.81.113.216:9825:9825/tcp \
     --name miner_exporter_clean \
     -v /var/run/docker.sock:/var/run/docker.sock \
      miner_exporter_clean:modif
@@ -135,8 +135,138 @@ sudo docker run \
     --network valbridge \
     --ip  172.28.5.55\
     -e "NAT_INTERNAL_IP=172.28.5.55" \
-    -e "NAT_EXTERNAL_IP=51.81.113.216" \
-    --publish 51.81.113.216:9825:9825/tcp \
+    -e "NAT_EXTERNAL_IP=51.81.113.217" \
+    --publish 51.81.113.217:9825:9825/tcp \
     --name miner_exporter_cheesy \
     -v /var/run/docker.sock:/var/run/docker.sock \
      miner_exporter_cheesy:modif
+
+sudo docker run \
+    -d \
+    --init \
+    --restart always \
+    --network valbridge \
+    --ip  172.28.5.56\
+    -e "NAT_INTERNAL_IP=172.28.5.56" \
+    -e "NAT_EXTERNAL_IP=51.81.113.218" \
+    --publish 51.81.113.218:9825:9825/tcp \
+    --name miner_exporter_fun \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+     miner_exporter_fun:modif
+
+sudo docker run \
+    -d \
+    --init \
+    --restart always \
+    --network valbridge \
+    --ip  172.28.5.57\
+    -e "NAT_INTERNAL_IP=172.28.5.57" \
+    -e "NAT_EXTERNAL_IP=51.81.113.219" \
+    --publish 51.81.113.219:9825:9825/tcp \
+    --name miner_exporter_jumpy \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+     miner_exporter_jumpy:modif
+
+sudo docker run \
+    -d \
+    --init \
+    --restart always \
+    --network valbridge \
+    --ip  172.28.5.58\
+    -e "NAT_INTERNAL_IP=172.28.5.58" \
+    -e "NAT_EXTERNAL_IP=51.81.113.220" \
+    --publish 51.81.113.220:9825:9825/tcp \
+    --name miner_exporter_macho \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+     miner_exporter_macho:modif
+
+sudo docker run \
+    -d \
+    --init \
+    --restart always \
+    --network valbridge \
+    --ip  172.28.5.59\
+    -e "NAT_INTERNAL_IP=172.28.5.59" \
+    -e "NAT_EXTERNAL_IP=51.81.113.221" \
+    --publish 51.81.113.221:9825:9825/tcp \
+    --name miner_exporter_mean \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+     miner_exporter_mean:modif
+
+sudo docker run \
+    -d \
+    --init \
+    --restart always \
+    --network valbridge \
+    --ip  172.28.5.60\
+    -e "NAT_INTERNAL_IP=172.28.5.60" \
+    -e "NAT_EXTERNAL_IP=51.81.113.222" \
+    --publish 51.81.113.222:9825:9825/tcp \
+    --name miner_exporter_mini \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+     miner_exporter_mini:modif
+
+sudo docker run \
+    -d \
+    --init \
+    --restart always \
+    --network valbridge \
+    --ip  172.28.5.61\
+    -e "NAT_INTERNAL_IP=172.28.5.61" \
+    -e "NAT_EXTERNAL_IP=51.81.113.223" \
+    --publish 51.81.113.223:9825:9825/tcp \
+    --name miner_exporter_rural \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+     miner_exporter_rural:modif
+
+sudo docker run \
+    -d \
+    --init \
+    --restart always \
+    --network valbridge \
+    --ip  172.28.5.62\
+    -e "NAT_INTERNAL_IP=172.28.5.62" \
+    -e "NAT_EXTERNAL_IP=135.148.128.208" \
+    --publish 135.148.128.208:9825:9825/tcp \
+    --name miner_exporter_sneaky \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+     miner_exporter_sneaky:modif
+
+sudo docker run \
+    -d \
+    --init \
+    --restart always \
+    --network valbridge \
+    --ip  172.28.5.63\
+    -e "NAT_INTERNAL_IP=172.28.5.63" \
+    -e "NAT_EXTERNAL_IP=135.148.12.209" \
+    --publish 135.148.128.209:9825:9825/tcp \
+    --name miner_exporter_sharp \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+     miner_exporter_sharp:modif
+
+sudo docker run \
+    -d \
+    --init \
+    --restart always \
+    --network valbridge \
+    --ip  172.28.5.64\
+    -e "NAT_INTERNAL_IP=172.28.5.64" \
+    -e "NAT_EXTERNAL_IP=135.148.12.210" \
+    --publish 135.148.128.210:9825:9825/tcp \
+    --name miner_exporter_short_menthol \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+     miner_exporter_short_menthol:modif
+
+sudo docker run \
+    -d \
+    --init \
+    --restart always \
+    --network valbridge \
+    --ip  172.28.5.64\
+    -e "NAT_INTERNAL_IP=172.28.5.64" \
+    -e "NAT_EXTERNAL_IP=135.148.12.210" \
+    --publish 135.148.128.210:9825:9825/tcp \
+    --name miner_exporter_short_menthol \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+     miner_exporter_short_menthol:modif
