@@ -28,7 +28,7 @@ sudo docker run \
     -e "NAT_EXTERNAL_IP=51.81.113.208" \
     --publish 51.81.113.208:9090:9090/tcp \
     --name prometheus \
-    -v /opt/validators/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml \
+    -v /opt/monitoring/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml \
     prom/prometheus
 
 ### Grafana ###
@@ -59,9 +59,9 @@ sudo docker run \
     --network valbridge \
     --ip  172.28.5.11\
     -e "NAT_INTERNAL_IP=172.28.5.11" \
-    -e "NAT_EXTERNAL_IP=51.81.113.223" \
-    --publish 51.81.113.223:9100:9100/tcp \
-    --name node2 \
+    -e "NAT_EXTERNAL_IP=51.81.113.208" \
+    --publish 51.81.113.208:9100:9100/tcp \
+    --name node \
     prom/node-exporter
 
 ### Testeando el docker de miner
@@ -70,11 +70,15 @@ watch -n60 'echo -n "miner addr:   "; docker exec validator miner peer addr | cu
 ### cadvisor ###
 
 sudo docker run \
+  --network valbridge \
+  --ip  172.28.5.11\
+  -e "NAT_INTERNAL_IP=172.28.5.11" \
+  -e "NAT_EXTERNAL_IP=51.81.113.208" \
+  --publish 51.81.113.208:9100:9100/tcp \
   --volume=/:/rootfs:ro \
   --volume=/var/run:/var/run:rw \
   --volume=/sys:/sys:ro \
   --volume=/var/lib/docker/:/var/lib/docker:ro \
-  --publish 51.81.113.208:8081:8080/tcp \
   --detach=true \
   --name=cadvisor \
   google/cadvisor:latest
