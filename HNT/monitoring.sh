@@ -71,10 +71,10 @@ watch -n60 'echo -n "miner addr:   "; docker exec validator miner peer addr | cu
 
 sudo docker run \
   --network valbridge \
-  --ip  172.28.5.11\
-  -e "NAT_INTERNAL_IP=172.28.5.11" \
+  --ip  172.28.5.6\
+  -e "NAT_INTERNAL_IP=172.28.5.6" \
   -e "NAT_EXTERNAL_IP=51.81.113.208" \
-  --publish 51.81.113.208:9100:9100/tcp \
+  --publish 51.81.113.208:8080:8080/tcp \
   --volume=/:/rootfs:ro \
   --volume=/var/run:/var/run:rw \
   --volume=/sys:/sys:ro \
