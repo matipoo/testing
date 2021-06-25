@@ -5,11 +5,11 @@ sudo docker run \
     --network valbridge \
     --ip  172.28.5.45\
     -e "NAT_INTERNAL_IP=172.28.5.45" \
-    -e "NAT_EXTERNAL_IP=51.81.113.221" \
+    -e "NAT_EXTERNAL_IP=135.148.35.41" \
     --publish 135.148.35.41:9825:9825/tcp \
-    --name miner_exporter_itchy \
+    --name miner_exporter_agreeable \
     -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_itchy:modif
+     miner_exporter_agreeable:modif
 
  sudo docker run \
     -d \
@@ -20,9 +20,9 @@ sudo docker run \
     -e "NAT_INTERNAL_IP=172.28.5.46" \
     -e "NAT_EXTERNAL_IP=51.81.113.208" \
     --publish 51.81.113.208:9825:9825/tcp \
-    --name miner_exporter_damp \
+    --name miner_exporter_breezy \
     -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_damp:modif
+     miner_exporter_breezy:modif
 
 sudo docker run \
     -d \
@@ -33,9 +33,9 @@ sudo docker run \
     -e "NAT_INTERNAL_IP=172.28.5.47" \
     -e "NAT_EXTERNAL_IP=51.81.113.209" \
     --publish 51.81.113.209:9825:9825/tcp \
-    --name miner_exporter_quiet \
+    --name miner_exporter_atomic \
     -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_quiet:modif
+     miner_exporter_atomic:modif
 
 sudo docker run \
     -d \
@@ -46,9 +46,9 @@ sudo docker run \
     -e "NAT_INTERNAL_IP=172.28.5.48" \
     -e "NAT_EXTERNAL_IP=51.81.113.210" \
     --publish 51.81.113.210:9825:9825/tcp \
-    --name miner_exporter_rapid \
+    --name miner_exporter_brief \
     -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_rapid:modif
+     miner_exporter_brief:modif
 
 sudo docker run \
     -d \
@@ -59,9 +59,9 @@ sudo docker run \
     -e "NAT_INTERNAL_IP=172.28.5.49" \
     -e "NAT_EXTERNAL_IP=51.81.113.211" \
     --publish 51.81.113.211:9825:9825/tcp \
-    --name miner_exporter_polite \
+    --name miner_exporter_brisk \
     -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_polite:modif
+     miner_exporter_brisk:modif
 
 sudo docker run \
     -d \
@@ -72,9 +72,9 @@ sudo docker run \
     -e "NAT_INTERNAL_IP=172.28.5.50" \
     -e "NAT_EXTERNAL_IP=51.81.113.212" \
     --publish 51.81.113.212:9825:9825/tcp \
-    --name miner_exporter_ripe \
+    --name miner_exporter_broad \
     -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_ripe:modif
+     miner_exporter_broad:modif
 
 sudo docker run \
     -d \
@@ -85,9 +85,9 @@ sudo docker run \
     -e "NAT_INTERNAL_IP=172.28.5.51" \
     -e "NAT_EXTERNAL_IP=51.81.113.213" \
     --publish 51.81.113.213:9825:9825/tcp \
-    --name miner_exporter_shallow \
+    --name miner_exporter_calm \
     -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_shallow:modif
+     miner_exporter_calm:modif
 
 sudo docker run \
     -d \
@@ -98,9 +98,9 @@ sudo docker run \
     -e "NAT_INTERNAL_IP=172.28.5.52" \
     -e "NAT_EXTERNAL_IP=51.81.113.214" \
     --publish 51.81.113.214:9825:9825/tcp \
-    --name miner_exporter_acrobatic \
+    --name miner_exporter_chilly \
     -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_acrobatic:modif
+     miner_exporter_chilly:modif
 
 sudo docker run \
     -d \
@@ -111,9 +111,9 @@ sudo docker run \
     -e "NAT_INTERNAL_IP=172.28.5.53" \
     -e "NAT_EXTERNAL_IP=51.81.113.215" \
     --publish 51.81.113.215:9825:9825/tcp \
-    --name miner_exporter_breezy \
+    --name miner_exporter_clean \
     -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_breezy:modif
+     miner_exporter_clean:modif
 
 sudo docker run \
     -d \
@@ -124,9 +124,9 @@ sudo docker run \
     -e "NAT_INTERNAL_IP=172.28.5.54" \
     -e "NAT_EXTERNAL_IP=51.81.113.216" \
     --publish 51.81.113.216:9825:9825/tcp \
-    --name miner_exporter_clean \
+    --name miner_exporter_cold_bubblegum \
     -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_clean:modif
+     miner_exporter_cold_bubblegum:modif
   
 sudo docker run \
     -d \
@@ -137,9 +137,9 @@ sudo docker run \
     -e "NAT_INTERNAL_IP=172.28.5.55" \
     -e "NAT_EXTERNAL_IP=51.81.113.217" \
     --publish 51.81.113.217:9825:9825/tcp \
-    --name miner_exporter_cheesy \
+    --name miner_exporter_cold_steel \
     -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_cheesy:modif
+     miner_exporter_cold_steel:modif
 
 sudo docker run \
     -d \
@@ -150,9 +150,9 @@ sudo docker run \
     -e "NAT_INTERNAL_IP=172.28.5.56" \
     -e "NAT_EXTERNAL_IP=51.81.113.218" \
     --publish 51.81.113.218:9825:9825/tcp \
-    --name miner_exporter_fun \
+    --name miner_exporter_cool_blonde \
     -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_fun:modif
+     miner_exporter_cool_blonde:modif
 
 sudo docker run \
     -d \
@@ -163,9 +163,9 @@ sudo docker run \
     -e "NAT_INTERNAL_IP=172.28.5.57" \
     -e "NAT_EXTERNAL_IP=51.81.113.219" \
     --publish 51.81.113.219:9825:9825/tcp \
-    --name miner_exporter_jumpy \
+    --name miner_exporter_cool_tan \
     -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_jumpy:modif
+     miner_exporter_cool_tan:modif
 
 sudo docker run \
     -d \
@@ -176,9 +176,9 @@ sudo docker run \
     -e "NAT_INTERNAL_IP=172.28.5.58" \
     -e "NAT_EXTERNAL_IP=51.81.113.220" \
     --publish 51.81.113.220:9825:9825/tcp \
-    --name miner_exporter_macho \
+    --name miner_exporter_creamy \
     -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_macho:modif
+     miner_exporter_creamy:modif
 
 sudo docker run \
     -d \
@@ -189,9 +189,9 @@ sudo docker run \
     -e "NAT_INTERNAL_IP=172.28.5.59" \
     -e "NAT_EXTERNAL_IP=51.81.113.221" \
     --publish 51.81.113.221:9825:9825/tcp \
-    --name miner_exporter_mean \
+    --name miner_exporter_curved \
     -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_mean:modif
+     miner_exporter_curved:modif
 
 sudo docker run \
     -d \
@@ -202,9 +202,9 @@ sudo docker run \
     -e "NAT_INTERNAL_IP=172.28.5.60" \
     -e "NAT_EXTERNAL_IP=51.81.113.222" \
     --publish 51.81.113.222:9825:9825/tcp \
-    --name miner_exporter_mini \
+    --name miner_exporter_custom \
     -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_mini:modif
+     miner_exporter_custom:modif
 
 sudo docker run \
     -d \
@@ -215,9 +215,9 @@ sudo docker run \
     -e "NAT_INTERNAL_IP=172.28.5.61" \
     -e "NAT_EXTERNAL_IP=51.81.113.223" \
     --publish 51.81.113.223:9825:9825/tcp \
-    --name miner_exporter_rural \
+    --name miner_exporter_elegant \
     -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_rural:modif
+     miner_exporter_elegant:modif
 
 sudo docker run \
     -d \
@@ -228,9 +228,9 @@ sudo docker run \
     -e "NAT_INTERNAL_IP=172.28.5.62" \
     -e "NAT_EXTERNAL_IP=135.148.128.208" \
     --publish 135.148.128.208:9825:9825/tcp \
-    --name miner_exporter_sneaky \
+    --name miner_exporter_fast \
     -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_sneaky:modif
+     miner_exporter_fast:modif
 
 sudo docker run \
     -d \
@@ -241,9 +241,9 @@ sudo docker run \
     -e "NAT_INTERNAL_IP=172.28.5.63" \
     -e "NAT_EXTERNAL_IP=135.148.12.209" \
     --publish 135.148.128.209:9825:9825/tcp \
-    --name miner_exporter_sharp \
+    --name miner_exporter_exotic \
     -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_sharp:modif
+     miner_exporter_exotic:modif
 
 sudo docker run \
     -d \
@@ -254,84 +254,6 @@ sudo docker run \
     -e "NAT_INTERNAL_IP=172.28.5.64" \
     -e "NAT_EXTERNAL_IP=135.148.12.210" \
     --publish 135.148.128.210:9825:9825/tcp \
-    --name miner_exporter_short_menthol \
+    --name miner_exporter_expert \
     -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_short_menthol:modif
-
-sudo docker run \
-    -d \
-    --init \
-    --restart always \
-    --network valbridge \
-    --ip  172.28.5.64\
-    -e "NAT_INTERNAL_IP=172.28.5.64" \
-    -e "NAT_EXTERNAL_IP=135.148.12.210" \
-    --publish 135.148.128.210:9825:9825/tcp \
-    --name miner_exporter_short_menthol \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_short_menthol:modif
-
-sudo docker run \
-    -d \
-    --init \
-    --restart always \
-    --network valbridge \
-    --ip  172.28.5.65\
-    -e "NAT_INTERNAL_IP=172.28.5.65" \
-    -e "NAT_EXTERNAL_IP=135.148.12.211" \
-    --publish 135.148.128.211:9825:9825/tcp \
-    --name miner_exporter_short_obsidian \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_short_obsidian:modif
-
-sudo docker run \
-    -d \
-    --init \
-    --restart always \
-    --network valbridge \
-    --ip  172.28.5.66\
-    -e "NAT_INTERNAL_IP=172.28.5.66" \
-    -e "NAT_EXTERNAL_IP=135.148.12.212" \
-    --publish 135.148.128.212:9825:9825/tcp \
-    --name miner_exporter_hot \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_hot:modif
-
-sudo docker run \
-    -d \
-    --init \
-    --restart always \
-    --network valbridge \
-    --ip  172.28.5.67\
-    -e "NAT_INTERNAL_IP=172.28.5.67" \
-    -e "NAT_EXTERNAL_IP=135.148.12.213" \
-    --publish 135.148.128.213:9825:9825/tcp \
-    --name miner_exporter_huge \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_huge:modif
-
-sudo docker run \
-    -d \
-    --init \
-    --restart always \
-    --network valbridge \
-    --ip  172.28.5.68\
-    -e "NAT_INTERNAL_IP=172.28.5.68" \
-    -e "NAT_EXTERNAL_IP=135.148.12.214" \
-    --publish 135.148.128.214:9825:9825/tcp \
-    --name miner_exporter_skinny \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_skinny:modif
-
-sudo docker run \
-    -d \
-    --init \
-    --restart always \
-    --network valbridge \
-    --ip  172.28.5.69\
-    -e "NAT_INTERNAL_IP=172.28.5.69" \
-    -e "NAT_EXTERNAL_IP=135.148.12.215" \
-    --publish 135.148.128.215:9825:9825/tcp \
-    --name miner_exporter_boxy \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-     miner_exporter_boxy:modif
+     miner_exporter_expert:modif
