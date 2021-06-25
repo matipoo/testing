@@ -1,0 +1,16 @@
+miner_exporter_cool_tan:modif miner_exporter_cool_blonde:modif miner_exporter_fast:modif  miner_exporter_expert:modif  miner_exporter_exotic:modif
+miner_exporter_elegant:modif
+miner_exporter_custom:modif
+miner_exporter_curved:modif
+miner_exporter_creamy:modif
+miner_exporter_cold_steel:modif
+miner_exporter_cold_bubblegum:modif
+miner_exporter_clean:modif
+miner_exporter_chilly:modif
+miner_exporter_calm:modif
+miner_exporter_broad:modif
+miner_exporter_brisk:modif
+miner_exporter_brief:modif
+miner_exporter_breezy:modif                       
+miner_exporter_atomic:modif                       
+miner_exporter_agreeable:modif 
