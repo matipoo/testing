@@ -23,7 +23,7 @@ log.setLevel(logging.INFO)
 
 # time to sleep between scrapes
 UPDATE_PERIOD = int(os.environ.get('UPDATE_PERIOD', 30))
-VALIDATOR_CONTAINER_NAME = os.environ.get('VALIDATOR_CONTAINER_NAME','itchy-fern-parrot')
+VALIDATOR_CONTAINER_NAME = os.environ.get('VALIDATOR_CONTAINER_NAME','agreeable-cherry-bear')
 
 # prometheus exporter types Gauge,Counter,Summary,Histogram,Info and Enum
 SCRAPE_TIME = prometheus_client.Summary('validator_scrape_time', 'Time spent collecting miner data')

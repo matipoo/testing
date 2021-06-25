@@ -6,15 +6,6 @@ brief-concrete-troll brisk-snowy-lion broad-caramel-lizard calm-olive-mink chill
 
 
 
-
-brief-concrete-troll
-brisk-snowy-lion
-broad-caramel-lizard
-calm-olive-mink
-chilly-charcoal-nightingale
-clean-metal-porpoise
-cold-steel-trout
-cool-blonde-mustang
 cool-tan-penguin
 creamy-brick-capybara
 curved-champagne-mallard
@@ -23,3 +14,10 @@ elegant-goldenrod-raccoon
 exotic-linen-scorpion
 expert-sage-shark
 fast-cinnamon-zebra
+
+
+miner_exporter_cool_blonde
+miner_exporter_cool_tan:
+135.148.128.208:9825
+ 135.148.128.209:9825
+ 135.148.128.210
