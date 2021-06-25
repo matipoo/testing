@@ -46,7 +46,8 @@ echo "cambios realizados"
 
 #sudo docker build -t miner_exporter_amateur_blood:modif amateur-blood-woodpecker/.
 sudo docker build -t miner_exporter_atomic:modif atomic-fossilized-ferret/.
-sudo docker build -t miner_exporter_amateur_blood:modif beautiful-maroon-hedgehog/.
+sudo docker build -t miner_exporter_amateur_beautifil:modif beautiful-maroon-hedgehog/.
+sudo docker build -t miner_exporter_blunt:modif blunt-gunmetal-coyote/.
 sudo docker build -t miner_exporter_best:modif best-tartan-bobcat/.
 sudo docker build -t miner_exporter_blunt:modif blunt-gunmetal-coyote/.
 sudo docker build -t miner_exporter_bouncy:modif bouncy-fuchsia-yeti/.
