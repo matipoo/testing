@@ -2,7 +2,14 @@
 
 
 
-set -e
+#set -e
+#cd /opt/
+#sudo mkdir monitoring
+#sudo mkdir monitoring/miner_exporter
+#sudo mkdir monitoring/docker
+
+
+cd /opt/monitoring
 
 DOCKER1=$1
 INTERNALIP1=$2
@@ -12,22 +19,28 @@ DOCKER2=$4
 INTERNALIP1=$5
 EXTERNALIP1=$6
 
+#Creo Carpetas
+sudo mkdir miner_exporter/$DOCKER1
+sudo mkdir miner_exporter/$DOCKER2
+
+#pause
+
 #sudo cp -r agreeable-cherry-bear/* amateur-blood-woodpecker 
-sudo cp -r agreeable-cherry-bear/* $DOCKER1
-sudo cp -r agreeable-cherry-bear/* $DOCKER2
+sudo cp -r docker/* miner_exporter/$DOCKER1
+sudo cp -r docker/* miner_exporter/$DOCKER2
 
 
 echo "Archivos Copiados"
 
 #sudo sed -i "s/agreeable-cherry-bear/amateur-blood-woodpecker/g" amateur-blood-woodpecker/miner_exporter.py
-sudo sed -i "s/agreeable-cherry-bear/$DOCKER1/g" $DOCKER1/miner_exporter.py
-sudo sed -i "s/agreeable-cherry-bear/$DOCKER2/g" $DOCKER2/miner_exporter.py
+sudo sed -i "s/ag/reeable-cherry-bear/$DOCKER1/g" /opt/monitoring/miner_exporter/$DOCKER1/miner_exporter.py
+sudo sed -i "s/agreeable-cherry-bear/$DOCKER2/g" /opt/monitoring/miner_exporter/$DOCKER2/miner_exporter.py
 
 echo "cambios realizados"
 
 #sudo docker build -t miner_exporter_amateur_blood:modif amateur-blood-woodpecker/.
-sudo docker build -t miner_exporter_$DOCKER1:modif $DOCKER1/.
-sudo docker build -t miner_exporter_$DOCKER2:modif $DOCKER2/.
+sudo docker build -t miner_exporter_$DOCKER1:modif miner_exporter/$DOCKER1/.
+sudo docker build -t miner_exporter_$DOCKER2:modif miner_exporter/$DOCKER2/.
 
 echo "buideado"
 
@@ -58,3 +71,5 @@ sudo docker run \
      miner_exporter_$DOCKER2:modif
     
 echo "dockers lanzados"
+
+    
