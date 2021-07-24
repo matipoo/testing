@@ -23,12 +23,13 @@ sudo docker run \
     --init \
     --restart always \
     --network valbridge \
-    --ip  172.28.5.4\
-    -e "NAT_INTERNAL_IP=172.28.5.4" \
-    -e "NAT_EXTERNAL_IP=51.81.113.208" \
-    --publish 51.81.113.208:9090:9090/tcp \
+    --ip  172.28.5.7\
+    -e "NAT_INTERNAL_IP=172.28.5.7" \
+    -e "NAT_EXTERNAL_IP=51.81.113.209" \
+    --publish 51.81.113.209:9090:9090/tcp \
     --name prometheus \
     -v /opt/monitoring/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml \
+    -v /opt/monitoring/data:/prometheus \
     prom/prometheus
 
 ### Grafana ###
